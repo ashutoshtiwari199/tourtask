@@ -1,0 +1,567 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    /* overflow: hidden; */
+    /* background-color: teal; */
+}
+::-webkit-scrollbar{
+    width: 1px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(175, 82, 19);
+    border-radius: 5px;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    background-color: rgb(241, 241, 241);
+}
+.background #nav{
+    z-index: 7;
+    /* float: right; */
+    display: auto;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    width: 50%;
+    height: 0px;
+    background-color: blue;
+
+}
+
+.menu{
+    z-index: 7;
+    position: absolute;
+    top: 5%;
+    right: 5%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    border: none;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+}
+.menu img{
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    /* z-index: 999999; */
+    color: teal;
+    transition: .15s;
+}
+/* .menu:hover img{
+    transform: scale(1.3);
+    
+} */
+.menu_links_div{
+    z-index: 7;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+    /* background-color: rgb(255, 255, 255); */
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .5s;
+
+    /* transform: scale(60); */
+}
+
+nav #close{
+    position: absolute;
+    /* opacity: ; */
+    margin-top: 18px;
+    margin-left: 614px;
+    width: 18px;
+    height: 14px;
+    background-color: #fff;
+}
+.menu_links {
+    /* z-index: 8; */
+    width: 600px;
+    height: 200px;
+    margin-top: 200px;
+    background-color:transparent;
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    align-items: center;
+    padding-top: 30px;
+    text-decoration: none;
+
+}
+.menu_links a{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 3px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+    /* transition: .3s cubic-bezier(0.1, 0.7, 1.0, 0.1) linear; */
+}
+.menu_links a:hover{
+    background-color: rgb(127, 233, 233);
+}
+
+.header_image{
+    position: relative;
+    width: 100%;
+    height: 625px;
+    /* background-color: rgb(173, 65, 65); */
+    /* outline: hidden; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%); */
+}
+.header_image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+
+}
+.overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 625px;
+    letter-spacing: 10.5px;
+    color: #fff;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to right, #007991c5, #78ffd7ad);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+
+}
+.overlay h1{
+    font-size: 48px;
+    margin-left: 20px;
+    left: 200px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: 28px;
+}
+.overlay input{
+    border: none;
+    margin-top: 70px;
+    font-size: 18px;
+    border-radius: 50px;
+    width: 250px;
+    height: 50px;
+    outline: none;
+    border: 2px solid #8e54e9;
+    background:linear-gradient(to right, #4776e6, #8e54e9);
+}
+.overlay img{
+    position: absolute;
+    /* z-index: -1; */
+    top: 5%;
+    left: 5%;
+    width: 60px;
+    height: 35px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.tourdetail{
+    position: absolute;
+    /* display: flex; */
+    /* align-items: center; */
+    width: 100%;
+    height: 80%;
+    background-color: rgb(241, 241, 241);
+}
+.tourdetail h2{
+    position: absolute;
+    top: 11%;
+    left: 30%;
+    font-size: 29px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color:rgb(144, 233, 148);
+}
+
+.tourdetail .tourdetail_lside{
+    /* display: inline-block; */
+    padding: 8px 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: 300; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 40%;
+    height: 60%;
+    /* background-color: rgb(207, 148, 39); */
+}
+.tourdetail .tourdetail_lside h3,p{
+    color: #6e6e6e;
+    margin-bottom: 25px;
+    font-size: 16px;
+    /* cursor: pointer; */
+}
+.tourdetail .tourdetail_lside a{
+    text-decoration: none;
+    opacity: 1;
+    width: 103px;
+    font-weight: 600;
+    color: rgb(143, 246, 149);
+    border-bottom: 2px solid rgb(144, 233, 148);
+}
+.tourdetail .tourdetail_lside #arrow{
+    width: 800px;
+}
+
+.tourdetail .tourdetail_rside{
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    width: 40%;
+    height: 60%;
+    /* background-color: rgb(207, 101, 39); */
+}
+.tourdetail .tourdetail_rside .image_card{
+    /* position: absolute; */
+    display: flex;
+    /* justify-content: end; */
+    width: 52%;
+    height: 60%;
+    transition: .3s;
+}
+.tourdetail .tourdetail_rside .image_card:hover{
+    transform: scale(1.1);
+    z-index: 1;
+    border: 8px solid transparent;
+    outline-style: solid ;
+    outline-color: rgb(144, 233, 148);
+    outline-width: 8px;
+    cursor: pointer;
+}
+
+.tourdetail .tourdetail_rside #card1{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+}
+.tourdetail .tourdetail_rside #card2{
+    position: absolute;
+    top: 11%;
+    left: 45%;
+}
+.tourdetail .tourdetail_rside #card3{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+
+.mid_img{
+    position: relative;
+    background-size: cover;
+    top: 78%;
+    width: 100%;
+    height: 120%;
+    background-color: rgb(241, 241, 241);
+}
+.image{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+    /* background-color: blue; */
+}
+.overlay_2{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 150px;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #007991c5, #78ffd7ad);
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+}
+.overlay_2 .detail_card{
+    /* position: absolute; */
+    font-size: 16px;
+    /* font-weight: 100; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 0px;
+    top: 40%;
+    left: 50%;
+    margin: 10px;
+    width: 19%;
+    height: 260px;
+    transition: .3s;
+    /* border-radius: 20px; */
+    background-color: rgb(246, 246, 246);
+    box-shadow: 0px 0px 30px rgb(59, 80, 78);
+}
+.overlay_2 .detail_card:hover{
+    transform: translateY(-15px);
+}
+
+.overlay_2 .detail_card p{
+    /* background-color: blue; */
+    width: 160px;
+    /* margin-left: 10px; */
+    color: #000;
+}
+
+.overlay_2 .detail_card img{
+    height: 50px;
+    width: 50px;
+}
+.section4{
+    position: relative;
+    top: 78%;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(144, 66, 66);
+}
+.section4 h3{
+    position: absolute;
+    font-weight: 600;
+    color: rgb(118, 200, 123);
+    top: 5%;
+    left: 35%;
+    font-size: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.section4 .section4_{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 12%;
+    left: 10%;
+    width: 80%;
+    height: 490px;
+    background-color: transparent;
+}
+.section4 .section4_ .section4_card{
+    position: relative;
+    width: 30.2%;
+    height: 100.2%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 10px rgba(59, 70, 69, 0.959);
+    background-color: #fafafa;
+    
+}
+#section4_card1:hover{
+    transform: rotateY(180deg);
+}
+#section4_card2:hover{
+    transform: rotateY(180deg);
+}
+#section4_card3:hover{
+    transform: rotateY(180deg);
+}
+
+
+.section4 .section4_ .section4_card img{
+    width: 100%;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+}
+.section4 .section4_ .section4_card .overlay_card{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.section4 .section4_ .section4_card .section4_card_front,.section4_card_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: transparent; */
+}
+.section4 .section4_ .section4_card .section4_card_back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.section4 .section4_ .section4_card #section4_card_back1{
+    background-color: #d68f33fa;
+}
+.section4 .section4_ .section4_card #section4_card_back2{
+    background-color: #84cc40;
+}
+.section4 .section4_ .section4_card #section4_card_back3{
+    background-color: #4285dd;
+}
+
+
+.section4 .section4_ .section4_card .section4_card_back h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.section4 .section4_ .section4_card .section4_card_back .section4_card_back_text span{
+    font-size: 52px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+}
+.section4 .section4_ .section4_card .section4_card_back .booknow{
+    padding: 12px 10px;
+    width: 40%;
+    height:40px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #000;
+    background-color: #fff;
+}
+.section4 .section4_ .section4_card .section4_card_back .booknow:hover{
+    /* animation: blink .3s; */
+    box-shadow: 0px 0px 10px rgb(59, 80, 78);
+}
+@keyframes blink{
+    0%{
+        transform: scale(1.1);
+        background-color: rgba(255, 255, 255, 0.794);
+        animation-delay: .2s;
+    }
+    50%{
+        transform: scale(1.3);
+        background-color: rgba(255, 255, 255, 0.52);
+        animation-delay: 1s;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.section4 .section4_ .section4_card #overlay_1{
+    background-color: rgba(235, 145, 27, 0.74);
+}
+#overlay_1_text{
+    background-color: rgb(255, 145, 0);;
+}
+.section4 .section4_ .section4_card #overlay_2{
+    background-color: rgba(128, 221, 41, 0.753);
+}
+#overlay_2_text{
+    background-color: rgb(128, 221, 41);
+}
+
+.section4 .section4_ .section4_card #overlay_3{
+    background-color: rgba(77, 134, 209, 0.753);
+}
+#overlay_3_text{
+    background-color: rgb(0, 110, 255);
+}
+
+/* .section4 .section4_ .section4_card .overlay_card h2{
+    position: absolute;
+    bottom: 28px;
+    right: 3px;
+    background-color: #fff;
+    text-align: right;
+
+} */
+
+.tst{
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    right: 5%;
+    /* padding: 5px 8px blue; */
+    /* background-color: rgba(41, 119, 221, 0.781); */
+    color: #fff;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.section4_card_detail{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    text-align: center;
+    /* color: black; */
+    /* border-bottom: 2px solid black; */
+    list-style-type: none;
+    /* transform: translate(-50%,-50%); */
+    color:#fafafa;
+    font-size: 18px;
+}
+.section4_card_detail li{
+    color: rgba(112, 121, 105, 0.959);
+    padding-bottom: 8px;
+    margin-top: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    /* text-decoration-skip:  */
+    /* text-decoration: underline; */
+    border-bottom: 2px solid rgba(100, 98, 98, 0.116);
+}
+
+.discover_all_tour{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    left: 42%;
+    bottom: 0%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    background-color: #84c04d;
+    color: #fff;
+}
+
+.modals{
+    position: absolute;
+    display: none;
+    z-index:99999;
+    top: 317%;
+    left: 10%;
+    width: 80%;
+    height: 80vh;
+    box-shadow: 0px 0px 300px 300px rgb(20, 20, 20);
+    background-color: #fff;
+}
